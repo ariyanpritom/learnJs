@@ -1,0 +1,55 @@
+Command line
+
+ls = directory lest.
+cd = cd directory / cd ../ (enter and back directory)
+mkdir = mkdir new folder name (create a new folder)
+cp = cp filename with extension directory (copy file)
+mv = mv filename with extension directory (move file)
+rm = rm filename with extension (remove file)
+rm -r = rm -r foldername (remove folder)
+open = open filename with extension (open file)
+touch = touch new file name with extension (create a new file)
+
+
+
+NPM:
+
+npm init
+npm install
+npm install (packageName) --save
+npm uninstall(packageName) --save
+
+--save-dev = devDependencies (web tools)
+--save = Dependencies (library)
+--global = global
+
+
+version:
+
+^5.7.3
+3 = patch / debug / bug fixing
+5 = minor /api
+5 = major / system
+^ = latest minor version
+* = latest major version
+
+
+
+{
+  "name": "javascriptmordernes6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server --mode development --open"
+  },
+  "author": "Ariyan Pritom",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.6.0",
+    "webpack-cli": "^4.2.0",
+    "webpack-dev-server": "^3.11.0"
+  }
+}

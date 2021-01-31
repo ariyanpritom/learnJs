@@ -1,0 +1,127 @@
+variableForES6
+
+// ES5
+
+var name1 = 'Jane Smith';
+
+// ES6
+
+let name2 = 'Jane Miller';
+
+const name3 = 'John Week'; 
+
+------------------------------------------------------**********------------------------------------------------------
+
+Block scope: {}
+Block scope always use if else, switch case, and all loops. Block scope use let and const not use var keyword.
+
+forExample:
+
+let i = 37;
+
+for(let i = 0; i < 5; i++){
+    console.log(i);
+}
+
+console.log(i);
+
+------------------------------------------------------**********------------------------------------------------------
+
+String ES5;
+
+let name = 'Alex Moon';
+
+console.log('This person is' + name);
+
+
+String ES6;
+
+let name = 'John Moon';
+
+console.log(`This person is ${name}`);
+------------------------------------------------------**********------------------------------------------------------
+
+Arrow Function ()=>{};
+Arrow function use in always function expression. not use object prototype. But use object prototype nested function for this keyword excess.
+
+var value = () => console.log("My name is pritom");
+value();
+
+------------------------------------------------------**********------------------------------------------------------
+
+Destructuring:
+
+Always use const property.
+
+array destructuring = ' ' = empty string means skip
+object destructuring = key: value;
+function destructuring function use array and object.
+if array passing argument parameter is function([one, two]);
+if object passing argument parameter is function({one, two});
+
+------------------------------------------------------**********------------------------------------------------------
+
+The Spread Operator ...
+
+Spread operator use function calls, in array literals or strings and also in object literals
+
+
+------------------------------------------------------**********------------------------------------------------------
+
+Rest parameter: Rest parameter use function last of parameter. Rest parameter store argument object.
+
+example:
+function restParameter(rest, ...Par);
+
+
+------------------------------------------------------**********------------------------------------------------------
+
+Default parameter: Default parameter use in function parameter.
+
+example:
+ function defaultParameter(numOne = 5, numTwo = 10);
+
+------------------------------------------------------**********------------------------------------------------------
+
+MAP
+
+const question = new Map();
+question.set(1, "ES5");
+question.set(2, "ES6");
+question.set(3, "ES7");
+question.set(4, "ES8");
+question.set(5, "ES9");
+
+question.get(5);
+question.has(5);
+question.delete(2);
+question.size();
+question.clear();
+
+
+------------------------------------------------------**********------------------------------------------------------
+
+Class : Class is use like function constructor and prototype.
+function constructor and prototype use ES5 and Class use ES6.
+
+ES6 Class can not work assign and declare variable.
+
+forExample:
+
+class Person {
+  constructor(name, yearOfBirth, job) {
+    this.name = name;
+    this.yearOfBirth = yearOfBirth;
+    this.job = job;
+  }
+
+  calculateAge() {
+    console.log(`${this.name} ${this.yearOfBirth}`);
+  }
+}
+var vivo = new Person("vivo", 2001, "Business");
+
+vivo.calculateAge();
+
+
+------------------------------------------------------**********------------------------------------------------------

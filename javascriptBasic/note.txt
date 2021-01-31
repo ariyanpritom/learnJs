@@ -1,0 +1,161 @@
+javascript Basic Concept:
+
+----------------**************-------------------
+console.log('Hello world'); // first program run.
+
+Primitive Data Type (immutable):
+
+1. Number: Floating point numbers, for decimals and integers
+2. String: Sequence of characters, used for text
+3. Boolean: Logic data type that can only be true or false
+4. Undefined: Data type of a variable that does not have a value yet.
+5. Also means 'non-existent'.
+
+------------------------------------**********************************---------------------------------------
+Variable mutation and Type coercion.
+
+------------------------------------**********************************---------------------------------------
+IF ELSE STATEMENT
+
+var isStudy = true;
+
+if(isStudy){
+    console.log('I am a student');
+}else{
+    console.log('I am not student');
+}
+
+
+------------------------------------**********************************---------------------------------------
+
+Ternary Operators
+
+condition ? if block : else block;
+
+Ternary operators are three parts: 1st part is (Condition part). 2nd part is (If block part). And 3rd part is (Else block part).
+
+------------------------------------**********************************---------------------------------------
+
+Truthy value and falsy value:
+
+Falsy value: Undefined, null, 0, ' ', Nan,
+Truthy value: Not falsy values.
+
+------------------------------------**********************************---------------------------------------
+
+== v/s ===
+
+==  operator does type coercion (Match All)
+=== operator does not type coercion (Only match datatype).
+
+------------------------------------**********************************---------------------------------------
+
+function
+
+Only Anonymous function use in variable.
+
+
+
+var whatDoYouDo = function (job, firstName) {
+  switch (job) {
+    case "teacher":
+      return firstName + " teaches kids how to code";
+    case "driver":
+      return firstName + " drives a cab in Lisbon.";
+    case "designer":
+      return firstName + " designer beautiful websites";
+
+    default:
+      return firstName + " does something else";
+  }
+};
+
+console.log(whatDoYouDo("teacher", "John"));
+console.log(whatDoYouDo("designer", "Jane"));
+console.log(whatDoYouDo("retired", "Mark"));
+
+return keyword: The return keyword does not only return the value. But it also immediately finishes the function. So we do not need the break here.
+
+Function statements and expressions:
+
+Statements and Expressions there are global concept in javascript. javascript expressions are pieces of code that always produce a value.
+
+
+------------------------------------**********************************---------------------------------------
+
+Arrays:  Arrays always declare in variable.
+
+There are two difference types declare Array:
+
+1st type: var name = ["John", "Mark", "Jane"];
+2nd type: var years = new Array(1990, 1969, 1948);
+
+Arrays of Method:
+
+arrays.unshft(); // add new array at first
+arrays.shift();  // remove array at first
+arrays.push();   // add new array at last
+arrays.pop();    // remove array at last
+arrays[arrays.length] = 'Mary'; // Mary variable add in arrays after arrays length.
+console.log(john.length); // arrays of length 
+console.log(john.indexOf("Smith")); // count this arrays identify.
+
+------------------------------------**********************************---------------------------------------
+
+Object: Define key value pairs. Which means that each value has a name which is called the key.
+
+
+
+there are two difference types use OBJECT. 
+
+1: Object literal-
+
+var pritom = {
+  firstName: "Ariyan",
+  lastName: "Pritom",
+  birthYear: 1993,
+  family: ["Arun", "Barun", "Suvo", "Titu"],
+  job: "programmer",
+  isMarried: false,
+};
+
+2: new object syntax-
+
+var jane = new Object();
+jane.firstName = "Jane";
+jane.birthYear = "1969";
+jane.job = "programmer";
+
+
+console.log use object are two types:
+
+1.  console.log(pritom.firstName);
+
+2.  console.log(pritom["lastName"]);
+    var x = "birthYear";
+    console.log(pritom[x]);
+
+Add object are two types:
+
+pritom.job = "Developer";
+pritom["isMarried"] = true;
+
+
+---------- ********** -----------
+
+// OBJECT AND METHOD:
+
+var tom = {
+  firstName: "Tom",
+  lastName: "Stive",
+  birthYear: 1992,
+  family: ["Jane", "Mark", "Bod"],
+  job: "teacher",
+  isMarried: false,
+  calcAge: function () {
+    this.age = 2020 - this.birthYear;
+  },
+};
+
+tom.calcAge();
+console.log(tom);

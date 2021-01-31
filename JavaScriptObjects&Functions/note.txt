@@ -1,0 +1,114 @@
+// Function constructor
+
+var Person = function (name, yearOfBirth, job) {
+  this.name = name;
+  this.yearOfBirth = yearOfBirth;
+  this.job = job;
+};
+
+Person.prototype.calculateAge = function () {
+  console.log(2016 - this.yearOfBirth);
+};
+
+var jack = new Person("Jack", "1995", "teacher");
+jack.calculateAge();  // new keywords create a new object.
+
+-----------------------------------------******************************--------------------------------------------
+
+// Object create
+
+var personProto = {
+  calculateAge: function () {
+    console.log(2016 - this.yearOfBirth);
+  },
+};
+
+var john = Object.create(personProto);
+john.name = "John";
+john.yearOfBirth = 1990;
+john.job = "teacher";
+
+var jane = Object.create(personProto, {
+  name: { value: "Jane" },
+  yearOfBirth: { value: 1969 },
+  job: { value: "designer" },
+});
+
+-----------------------------------------******************************--------------------------------------------
+
+// callback function: passing function another function argument.
+
+var years = [1990, 1965, 1937, 2005, 1998];
+
+function arrayCalc(arr, fn) {
+  var arrRes = [];
+  for (var i = 0; i < arr.length; i++) {
+    arrRes.push(fn(arr[i]));
+  }
+  return arrRes;
+}
+
+function calculateAge(el) {
+  return 2016 - el;
+}
+
+var args = arrayCalc(years, calculateAge);
+console.log(args);
+
+-----------------------------------------******************************--------------------------------------------
+
+// Return function: Return function always return this inner function. // var returnFunction = returnFun(outer function access)(inner function access);  Return function which inner function use always anonymous function.
+
+function interviewQuestion(job) {
+  if (job === "designer") {
+    return function (name) {
+      console.log(name + ", can you please explain what UX design is?");
+    };
+  } else if (job === "teacher") {
+    return function (name) {
+      console.log("What subject do you teach, " + name + " ?");
+    };
+  } else {
+    return function (name) {
+      console.log("Hello " + name + ", what do you do?");
+    };
+  }
+}
+
+var teacherQuestion = interviewQuestion("designer")("Jack");
+var teacherQuestion = interviewQuestion("teacher")("John");
+var teacherQuestion = interviewQuestion("programmer")("Marry");
+
+-----------------------------------------******************************--------------------------------------------
+
+// IIFE = Immediately Invoked Function Expression (function)(argument);
+
+(function () {
+  var score = Math.random() * 10;
+  console.log(score);
+})();
+
+(function (goodLuck) {
+  var score = Math.random() * 10;
+  console.log(score >= 5 - goodLuck);
+})(5);
+
+-----------------------------------------******************************--------------------------------------------
+
+Closure: An inner function has always access to the variables and parameters of its outer function, even after the outer function has returned. 
+
+-----------------------------------------******************************--------------------------------------------
+
+// Bind, Call, Apply
+
+Bind, Call Method are same purpose work. But work type difference.
+
+Bind:
+var mainObjOne = printMe.bind(object, "This is");
+mainObjOne();
+
+Call: call(this, 'argument')
+var mainObjTwo = printMe.call(object2, "this is superstar ");
+
+Apply: apply(this, ['argument'])
+var mainObjTwo = printMe.apply(object3, ["this woman is "]);
